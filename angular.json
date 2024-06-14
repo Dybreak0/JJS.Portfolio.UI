@@ -40,7 +40,7 @@
       "projectType": "library",
       "root": "projects/portfolio-data",
       "sourceRoot": "projects/portfolio-data/src",
-      "prefix": "lib",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -78,7 +78,7 @@
       },
       "root": "projects/portfolio-ui",
       "sourceRoot": "projects/portfolio-ui/src",
-      "prefix": "app",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",

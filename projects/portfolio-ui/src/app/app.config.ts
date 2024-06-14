@@ -3,14 +3,14 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { jjsLoaderInterceptor } from '@portfolio-data';
+import { jjsErrorInterceptor, jjsLoaderInterceptor } from '@portfolio-data';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(
-      withInterceptors([jjsLoaderInterceptor]),
+      withInterceptors([jjsLoaderInterceptor, jjsErrorInterceptor]),
     )
   ]
 };
