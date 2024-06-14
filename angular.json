@@ -1,0 +1,190 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "portfolio-component": {
+      "projectType": "library",
+      "root": "projects/portfolio-component",
+      "sourceRoot": "projects/portfolio-component/src",
+      "prefix": "",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/portfolio-component/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/portfolio-component/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/portfolio-component/tsconfig.lib.json"
+            },
+            "staging": {
+              "tsConfig": "projects/portfolio-component/tsconfig.lib.staging.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/portfolio-component/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "portfolio-data": {
+      "projectType": "library",
+      "root": "projects/portfolio-data",
+      "sourceRoot": "projects/portfolio-data/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/portfolio-data/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/portfolio-data/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/portfolio-data/tsconfig.lib.json"
+            },
+            "staging": {
+              "tsConfig": "projects/portfolio-data/tsconfig.lib.staging.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/portfolio-data/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "portfolio-ui": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/portfolio-ui",
+      "sourceRoot": "projects/portfolio-ui/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/portfolio-ui",
+            "index": "projects/portfolio-ui/src/index.html",
+            "browser": "projects/portfolio-ui/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/portfolio-ui/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/portfolio-ui/public"
+              },
+              {
+                "glob": "**/*",
+                "input": "./projects/portfolio-component/src/assets",
+                "output": "./component-assets"
+              }
+            ],
+            "styles": ["projects/portfolio-ui/src/styles.scss"],
+            "scripts": [],
+            "preserveSymlinks": true
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": {
+                "scripts": true,
+                "styles": true,
+                "hidden": false,
+                "vendor": true
+              },
+              "fileReplacements": [
+                {
+                  "replace": "projects/portfolio-ui/src/environments/environment.ts",
+                  "with": "projects/portfolio-ui/src/environments/environment.development.ts"
+                }
+              ]
+            },
+            "staging": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/portfolio-ui/src/environments/environment.ts",
+                  "with": "projects/portfolio-ui/src/environments/environment.staging.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "portfolio-ui:build:production"
+            },
+            "development": {
+              "buildTarget": "portfolio-ui:build:development"
+            },
+            "staging": {
+              "buildTarget": "portfolio-ui:build:staging"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/portfolio-ui/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/portfolio-ui/public"
+              }
+            ],
+            "styles": ["projects/portfolio-ui/src/styles.scss"],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}
