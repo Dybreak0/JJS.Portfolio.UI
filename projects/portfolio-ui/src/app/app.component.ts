@@ -4,12 +4,13 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { JjsButtonComponent, JjsLoaderComponent } from '@portfolio-component';
 import { HttpRequestService, JjsLoaderService } from '@portfolio-data';
+import { FooterComponent, HeaderComponent } from '@portfolio-ui';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, JjsButtonComponent, JjsLoaderComponent, CommonModule],
+  imports: [RouterOutlet, JjsButtonComponent, JjsLoaderComponent, CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

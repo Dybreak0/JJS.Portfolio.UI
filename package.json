@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "test": "ng test",
-    "build:component": "ng build portfolio-component --watch",
-    "build:data": "ng build portfolio-data --watch",
+    "build:c": "ng build portfolio-component --watch",
+    "build:d": "ng build portfolio-data --watch",
     "start": "ng serve -o"
   },
   "private": true,
@@ -15,9 +15,13 @@
     "@angular/compiler": "^18.0.0",
     "@angular/core": "^18.0.0",
     "@angular/forms": "^18.0.0",
+    "@angular/localize": "^18.0.3",
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^17.0.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

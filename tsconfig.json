@@ -22,7 +22,10 @@
       ],
       "@portfolio-data": [
         "projects/portfolio-data/src/public-api.ts"
-      ]
+      ],
+      "@portfolio-ui": [
+        "projects/portfolio-ui/src/public.ts"
+      ],
     },
     "importHelpers": true,
     "target": "ES2022",
