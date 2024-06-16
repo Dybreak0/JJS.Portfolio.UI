@@ -1,1 +1,84 @@
-<p>navigation works!</p>
+<nav class="sidenav bg-light fixed-sidenav">
+  <div class="container-fluid">
+    <div class="navbar-brand">
+      <img src="path-to-angular-logo.svg" alt="Angular Logo" class="img-fluid" style="height: 40px;">
+    </div>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#collapseDashboards" role="button" aria-expanded="false" aria-controls="collapseDashboards">
+          <i class="bi bi-speedometer2"></i> Dashboards
+        </a>
+        <div class="collapse" id="collapseDashboards">
+          <ul class="nav flex-column ms-3">
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboards/ecommerce">Ecommerce</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboards/crm">CRM</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#collapseForms" role="button" aria-expanded="false" aria-controls="collapseForms">
+          <i class="bi bi-ui-checks"></i> Forms
+        </a>
+        <div class="collapse" id="collapseForms">
+          <ul class="nav flex-column ms-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="/forms/controls-and-validations">Controls & Validations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/forms/extended-controls">Extended Controls</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/forms/form-layouts">Sample Layouts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/forms/material-forms">Material Forms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/forms/stepper">Stepper / Wizard</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#collapseTables" role="button" aria-expanded="false" aria-controls="collapseTables">
+          <i class="bi bi-table"></i> Tables
+        </a>
+        <div class="collapse" id="collapseTables">
+          <ul class="nav flex-column ms-3">
+            <li class="nav-item">
+              <a class="nav-link" href="/tables/regular-tables">Regular Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tables/extended-tables">Extended Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tables/smart-tables">Smart Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tables/external-filters-tables">Tables with Filters</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#collapseCharts" role="button" aria-expanded="false" aria-controls="collapseCharts">
+          <i class="bi bi-bar-chart"></i> Charts
+        </a>
+        <div class="collapse" id="collapseCharts">
+          <ul class="nav flex-column ms-3">
+            <li class="nav-item">
+              <a class="nav-link" href="/charts/chartjs">ChartJS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/charts/ng2-charts">ng2-charts</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

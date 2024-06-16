@@ -1,4 +1,4 @@
-<!-- <nav class="navbar navbar-light">
+<nav class="navbar navbar-light">
   <div class="container">
     <a class="navbar-brand" routerLink="/">JJS</a>
 
@@ -29,7 +29,7 @@
       </li>
     </ul>
   </div>
-</nav> -->
+</nav>
 <!--
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="/">YourBrand</a>
@@ -80,62 +80,3 @@
       </div>
   </div>
 </nav> -->
-
-
-
-<div class="fixed-sidenav">
-  <div class="side-menu-branding">
-    <img src="angular-logo.svg" alt="Angular Logo">
-  </div>
-  <ul class="side-menu-navigation">
-    <li class="menu-item expandable-item">
-      <div class="menu-link" onclick="toggleMenu(this)">
-        <span class="menu-item-title">Dashboards</span>
-      </div>
-      <ul class="sub-menu">
-        <li class="menu-item"><a href="/dashboards/ecommerce">Ecommerce</a></li>
-        <li class="menu-item"><a href="/dashboards/crm">CRM</a></li>
-      </ul>
-    </li>
-    <li class="menu-item expandable-item active">
-      <div class="menu-link" onclick="toggleMenu(this)">
-        <span class="menu-item-title">Forms</span>
-      </div>
-      <ul class="sub-menu">
-        <li class="menu-item active"><a href="/forms/controls-and-validations">Controls & Validations</a></li>
-        <li class="menu-item"><a href="/forms/extended-controls">Extended Controls</a></li>
-        <li class="menu-item"><a href="/forms/form-layouts">Sample Layouts</a></li>
-        <li class="menu-item"><a href="/forms/material-forms">Material Forms</a></li>
-        <li class="menu-item"><a href="/forms/stepper">Stepper / Wizard</a></li>
-      </ul>
-    </li>
-    <li class="menu-item expandable-item">
-      <div class="menu-link" onclick="toggleMenu(this)">
-        <span class="menu-item-title">Tables</span>
-      </div>
-      <ul class="sub-menu">
-        <li class="menu-item"><a href="/tables/regular-tables">Regular Tables</a></li>
-        <li class="menu-item"><a href="/tables/extended-tables">Extended Tables</a></li>
-        <li class="menu-item"><a href="/tables/smart-tables">Smart Tables</a></li>
-        <li class="menu-item"><a href="/tables/external-filters-tables">Tables with Filters</a></li>
-      </ul>
-    </li>
-    <li class="menu-item expandable-item">
-      <div class="menu-link" onclick="toggleMenu(this)">
-        <span class="menu-item-title">Charts</span>
-      </div>
-      <ul class="sub-menu">
-        <li class="menu-item"><a href="/charts/bar-charts">Bar Charts</a></li>
-        <li class="menu-item"><a href="/charts/line-charts">Line Charts</a></li>
-        <li class="menu-item"><a href="/charts/pie-charts">Pie Charts</a></li>
-        <li class="menu-item"><a href="/charts/scatter-charts">Scatter Charts</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-<script>
-  function toggleMenu(element) {
-    element.parentElement.classList.toggle('active');
-  }
-</script>
