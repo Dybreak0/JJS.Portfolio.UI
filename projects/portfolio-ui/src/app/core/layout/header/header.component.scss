@@ -1,0 +1,41 @@
+.fixed-sidenav {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #f4f4f4;
+  padding-top: 20px;
+}
+.side-menu-branding {
+  text-align: center;
+  padding: 10px;
+}
+.side-menu-branding img {
+  width: 50px;
+}
+.side-menu-navigation {
+  list-style-type: none;
+  padding: 0;
+}
+.menu-item {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.menu-item:hover {
+  background-color: #ddd;
+}
+.menu-item-icon {
+  margin-right: 10px;
+}
+.expandable-item .sub-menu {
+  display: none;
+  list-style-type: none;
+  padding-left: 20px;
+}
+.expandable-item.active .sub-menu {
+  display: block;
+}
+.menu-item.active {
+  background-color: #ccc;
+}

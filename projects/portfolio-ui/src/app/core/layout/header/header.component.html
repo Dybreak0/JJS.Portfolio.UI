@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light">
+<!-- <nav class="navbar navbar-light">
   <div class="container">
     <a class="navbar-brand" routerLink="/">JJS</a>
 
@@ -29,4 +29,113 @@
       </li>
     </ul>
   </div>
-</nav>
+</nav> -->
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">YourBrand</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/features">Features</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/pricing">Pricing</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<!--
+<nav class="navbar navbar-inner navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header" style="">
+          <button type="button" class="navbar-toggle"
+                  (click)="isCollapsed = !isCollapsed">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" routerLink="/customers">
+              <img src="assets/images/people.png" alt="logo" />
+              <span class="app-title">Customer Manager</span>
+          </a>
+          <span class="navbar-collapse" [attr.data-collapse]="isCollapsed">
+              <ul class="nav navbar-nav nav-pills navBarPadding">
+                  <li routerLinkActive="active"><a routerLink="/customers">Customers</a></li>
+                  <li routerLinkActive="active"><a routerLink="/orders">Orders</a></li>
+                  <li routerLinkActive="active"><a routerLink="/about">About</a></li>
+                  <li routerLinkActive="active" (click)="loginOrOut()" data-cy="login-logout"><a>{{ loginLogoutText }}</a></li>
+              </ul>
+          </span>
+      </div>
+  </div>
+</nav> -->
+
+
+
+<div class="fixed-sidenav">
+  <div class="side-menu-branding">
+    <img src="angular-logo.svg" alt="Angular Logo">
+  </div>
+  <ul class="side-menu-navigation">
+    <li class="menu-item expandable-item">
+      <div class="menu-link" onclick="toggleMenu(this)">
+        <span class="menu-item-title">Dashboards</span>
+      </div>
+      <ul class="sub-menu">
+        <li class="menu-item"><a href="/dashboards/ecommerce">Ecommerce</a></li>
+        <li class="menu-item"><a href="/dashboards/crm">CRM</a></li>
+      </ul>
+    </li>
+    <li class="menu-item expandable-item active">
+      <div class="menu-link" onclick="toggleMenu(this)">
+        <span class="menu-item-title">Forms</span>
+      </div>
+      <ul class="sub-menu">
+        <li class="menu-item active"><a href="/forms/controls-and-validations">Controls & Validations</a></li>
+        <li class="menu-item"><a href="/forms/extended-controls">Extended Controls</a></li>
+        <li class="menu-item"><a href="/forms/form-layouts">Sample Layouts</a></li>
+        <li class="menu-item"><a href="/forms/material-forms">Material Forms</a></li>
+        <li class="menu-item"><a href="/forms/stepper">Stepper / Wizard</a></li>
+      </ul>
+    </li>
+    <li class="menu-item expandable-item">
+      <div class="menu-link" onclick="toggleMenu(this)">
+        <span class="menu-item-title">Tables</span>
+      </div>
+      <ul class="sub-menu">
+        <li class="menu-item"><a href="/tables/regular-tables">Regular Tables</a></li>
+        <li class="menu-item"><a href="/tables/extended-tables">Extended Tables</a></li>
+        <li class="menu-item"><a href="/tables/smart-tables">Smart Tables</a></li>
+        <li class="menu-item"><a href="/tables/external-filters-tables">Tables with Filters</a></li>
+      </ul>
+    </li>
+    <li class="menu-item expandable-item">
+      <div class="menu-link" onclick="toggleMenu(this)">
+        <span class="menu-item-title">Charts</span>
+      </div>
+      <ul class="sub-menu">
+        <li class="menu-item"><a href="/charts/bar-charts">Bar Charts</a></li>
+        <li class="menu-item"><a href="/charts/line-charts">Line Charts</a></li>
+        <li class="menu-item"><a href="/charts/pie-charts">Pie Charts</a></li>
+        <li class="menu-item"><a href="/charts/scatter-charts">Scatter Charts</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<script>
+  function toggleMenu(element) {
+    element.parentElement.classList.toggle('active');
+  }
+</script>

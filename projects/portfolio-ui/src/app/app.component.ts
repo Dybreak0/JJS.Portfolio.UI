@@ -23,18 +23,21 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {
   }
   ngOnInit(): void {
-    this.httpService
-    .get()
-    .pipe(
-    takeUntilDestroyed(this.destroyRef))
-    .subscribe({
-      next: (response) => {
-        console.log(response);
-      },
-      error: (errors) => {
-        console.log(errors);
-      },
-    });
+    // this.httpService
+    // .get()
+    // .pipe(
+    // takeUntilDestroyed(this.destroyRef))
+    // .subscribe({
+    //   next: (response) => {
+    //     console.log(response);
+    //   },
+    //   error: (errors) => {
+    //     console.log(errors);
+    //   },
+    // });
+
+    this.httpService.get401().subscribe();
+    this.httpService.get503().subscribe();
   }
 
   ngOnDestroy(): void {
