@@ -39,6 +39,12 @@ export class AppComponent implements OnInit, OnDestroy {
     this.httpService.get503().subscribe();
   }
 
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
   ngOnDestroy(): void {
   }
 }

@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Woodchuck';
+    src: url(../../fonts/Woodchuck/OTF/Woodchuck-Heavy.otf) format("otf"),
+        url(../../fonts/Woodchuck/WOFF2/Woodchuck-Heavy.woff2) format("woff2");
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Woodchuck';
+    src: url(../../fonts/Woodchuck/OTF/Woodchuck-Bold.otf) format("otf"),
+        url(../../fonts/Woodchuck/WOFF2/Woodchuck-Bold.woff2) format("woff2");
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Woodchuck';
+    src: url(../../fonts/Woodchuck/OTF/Woodchuck-Regular.otf) format("otf"),
+        url(../../fonts/Woodchuck/WOFF2/Woodchuck-Regular.woff2) format("woff2");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Woodchuck';
+    src: url(../../fonts/Woodchuck/OTF/Woodchuck-Light.otf) format("otf"),
+        url(../../fonts/Woodchuck/WOFF2/Woodchuck-Light.woff2) format("woff2");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Woodchuck';
+    src: url(../../fonts/Woodchuck/OTF/Woodchuck-Thin.otf) format("otf"),
+        url(../../fonts/Woodchuck/WOFF2/Woodchuck-Thin.woff2) format("woff2");
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+}

@@ -1,0 +1,1 @@
+import{Ba as o,Ca as a,Fa as r,Ga as s,V as i}from"./chunk-VHZFYB4H.js";var m=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=i({type:e,selectors:[["feature-settings-page"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,c){n&1&&(o(0,"p"),r(1,"settings works!"),a())}});let t=e;return t})();export{m as a};
