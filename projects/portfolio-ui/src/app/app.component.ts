@@ -1,4 +1,4 @@
-import { Component, DestroyRef, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, DestroyRef, OnDestroy, OnInit, ViewEncapsulation, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { JjsButtonComponent, JjsLoaderComponent } from '@portfolio-component';
@@ -11,7 +11,8 @@ import { FooterComponent, HeaderComponent, NavigationComponent } from '@portfoli
   standalone: true,
   imports: [RouterOutlet, JjsButtonComponent, JjsLoaderComponent, CommonModule, HeaderComponent, FooterComponent, NavigationComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'portfolio-ui';
@@ -22,29 +23,16 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {
   }
   ngOnInit(): void {
-    // this.httpService
-    // .get()
-    // .pipe(
-    // takeUntilDestroyed(this.destroyRef))
-    // .subscribe({
-    //   next: (response) => {
-    //     console.log(response);
-    //   },
-    //   error: (errors) => {
-    //     console.log(errors);
-    //   },
-    // });
-
     this.httpService.get401().subscribe();
     this.httpService.get503().subscribe();
+  }
+
+  ngOnDestroy(): void {
   }
 
   menuOpen = false;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
-  }
-
-  ngOnDestroy(): void {
   }
 }

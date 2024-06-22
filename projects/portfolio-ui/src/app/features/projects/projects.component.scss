@@ -1,0 +1,25 @@
+.circle-container {
+  width: 200px;
+  /* Set a fixed width */
+  height: 200px;
+  /* Set a fixed height, same as width to make it a circle */
+  border-radius: 50%;
+  /* Make the container circular */
+  overflow: hidden;
+  /* Ensure that the image fits within the circle */
+  display: flex;
+  /* Use flexbox to center the image */
+  justify-content: center;
+  /* Center the image horizontally */
+  align-items: center;
+  /* Center the image vertically */
+}
+
+.circle-container img {
+  width: 100%;
+  /* Ensure the image covers the container */
+  height: 100%;
+  /* Maintain the aspect ratio */
+  object-fit: cover;
+  /* Ensure the image covers the container without stretching */
+}
