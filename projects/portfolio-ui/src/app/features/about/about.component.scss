@@ -1,4 +1,4 @@
-@import '../../../../../portfolio-component/src/assets/scss/styles.scss';
+@import "styles.scss";
 
 .mv {
   width: 100%;
@@ -6,12 +6,20 @@
   display: flex;
   color: #fff;
   position: relative;
-  height: calc(100svh - $padding-header-top);
+  height: calc(100svh - $wide-pc-min-height-header);
   background-image: url('../../../../../portfolio-component/src/assets/images/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
+
+  @include is-tablet {
+    height: calc(100svh - $tab-min-height-header);
+  }
+
+  @include is-mobile {
+    height: calc(100svh - $sp-min-height-header);
+  }
 
   .meteor {
     position: absolute;
@@ -131,37 +139,5 @@
       z-index: 1;
       object-fit: cover;
     }
-  }
-}
-
-.bg-pan-left {
-  animation: bg-pan-left 8s both infinite;
-  animation-direction: alternate;
-}
-
-@keyframes bg-pan-left {
-  0% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes float {
-  0% {
-    margin-top: 0px;
-    transform: scale(0.95);
-  }
-
-  50% {
-    margin-top: -40px;
-    transform: scale(1);
-  }
-
-  100% {
-    margin-top: 0px;
-    transform: scale(0.95);
   }
 }

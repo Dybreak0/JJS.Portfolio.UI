@@ -1,0 +1,25 @@
+.l-container {
+  max-width: pxToRem(1700);
+  margin: 0 auto;
+  padding: 0 pxToRem(60);
+
+  &--l {
+    padding: 0 !important;
+  }
+
+  @include is-wide {
+    padding: 0 pxToRem(50);
+  }
+
+  @include is-desktop {
+    padding: 0 pxToRem(40);
+  }
+
+  @include is-tablet {
+    padding: 0 pxToRem(30);
+  }
+
+  @include is-mobile {
+    padding: 0 pxToRem(20);
+  }
+}

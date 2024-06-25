@@ -1,0 +1,63 @@
+// ---------------------------------------------------------------
+//  Media Query
+//
+// > usage
+// > @include is-wide {};
+// > @include is-desktop {};
+// > @include is-tablet {};
+// > @include is-mobile {};
+// > @include is-between(max-width,min-width) {};
+// > @include is-max(max-width) {};
+// > @include is-min(min-width) {};
+//
+//
+// --------------------------------------------------------------
+
+//PC
+@mixin is-wide {
+  @media only screen and (max-width: $bp-wide) {
+    @content;
+  }
+}
+
+//SP
+@mixin is-desktop {
+  @media only screen and (max-width: $bp-pc) {
+    @content;
+  }
+}
+
+//Tablets
+@mixin is-tablet {
+  @media only screen and (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+//SP
+@mixin is-mobile {
+  @media only screen and (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+// @include is-between()
+@mixin is-between($between-max, $between-min) {
+  @media (max-width: $between-max) and (min-width: $between-min) {
+    @content;
+  }
+}
+
+// @include is-max()
+@mixin is-max($is-max) {
+  @media only screen and (max-width: $is-max) {
+    @content;
+  }
+}
+
+// @include is-min()
+@mixin is-min($is-min) {
+  @media only screen and (min-width: $is-min) {
+    @content;
+  }
+}

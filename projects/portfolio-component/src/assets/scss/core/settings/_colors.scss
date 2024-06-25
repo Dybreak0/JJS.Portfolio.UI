@@ -1,0 +1,72 @@
+$background-color: black;
+$gray-bg-color: #f9f9f9;
+$title-color: black;
+$text-color: #767676;
+$header-color: #147efb;
+$black-shade: #2d2e32;
+
+
+// Define Invoker's color palette
+$invoker-golden-yellow: #FFD700;
+$invoker-deep-purple: #800080;
+$invoker-crimson-red: #DC143C;
+$invoker-bright-cyan: #00FFFF;
+$invoker-emerald-green: #50C878;
+$invoker-dark-blue: #00008B;
+$invoker-black: #000000;
+$invoker-white: #FFFFFF;
+
+// // Example usage in styles
+// body {
+//   background-color: $invoker-dark-blue;
+//   color: $invoker-white;
+// }
+
+// header {
+//   background-color: $invoker-golden-yellow;
+//   color: $invoker-black;
+// }
+
+// button {
+//   background-color: $invoker-crimson-red;
+//   color: $invoker-white;
+// }
+
+// a {
+//   color: $invoker-bright-cyan;
+
+//   &:hover {
+//     color: darken($invoker-bright-cyan, 10%);
+//   }
+// }
+
+// .invoker-accent {
+//   border: 2px solid $invoker-emerald-green;
+// }
+
+// // Additional styles to utilize the palette
+// .navbar {
+//   background-color: $invoker-deep-purple;
+//   color: $invoker-white;
+
+//   .nav-link {
+//     color: $invoker-golden-yellow;
+
+//     &:hover {
+//       color: lighten($invoker-golden-yellow, 20%);
+//     }
+//   }
+// }
+
+// .footer {
+//   background-color: $invoker-black;
+//   color: $invoker-white;
+
+//   a {
+//     color: $invoker-bright-cyan;
+
+//     &:hover {
+//       color: darken($invoker-bright-cyan, 10%);
+//     }
+//   }
+// }

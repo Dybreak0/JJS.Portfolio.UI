@@ -86,9 +86,12 @@
             "outputPath": "dist/portfolio-ui",
             "index": "projects/portfolio-ui/src/index.html",
             "browser": "projects/portfolio-ui/src/main.ts",
-            "polyfills": ["zone.js", "@angular/localize/init"],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/portfolio-ui/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": ["projects/portfolio-component/src/assets/scss"]
+            },
             "assets": [
               {
                 "glob": "**/*",
@@ -100,16 +103,13 @@
                 "output": "./component-assets"
               }
             ],
+
             "styles": [
-              "projects/portfolio-ui/src/styles.scss",
-              "projects/portfolio-ui/src/custom-bootstrap.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.min.css",
               "projects/portfolio-component/src/assets/scss/styles.scss",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+              "projects/portfolio-ui/src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ],
+            "scripts": [],
             "preserveSymlinks": true
           },
           "configurations": {
@@ -179,11 +179,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing",
-              "@angular/localize/init"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/portfolio-ui/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [

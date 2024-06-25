@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'core-header-layout',
+  selector: 'l-header-layout',
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
@@ -12,6 +12,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class HeaderComponent implements OnInit, OnDestroy {
   isCollapsed: boolean = false;
   loginLogoutText = 'Login';
+
+  isShowHeaderOverlay: boolean = false;
 
   ngOnInit() {
 

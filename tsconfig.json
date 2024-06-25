@@ -26,6 +26,9 @@
       "@portfolio-ui": [
         "projects/portfolio-ui/src/public.ts"
       ],
+      "@global-styles": [
+        "projects/portfolio-component/src/assets/scss/styles.scss"
+      ]
     },
     "importHelpers": true,
     "target": "ES2022",

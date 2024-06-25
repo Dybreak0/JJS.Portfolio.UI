@@ -1,10 +1,10 @@
 <header>
-  <nav class="core-header container">
-    <a class="core-header__brand" href="https://www.linkedin.com/in/jeremy-james-sangutan-73b528249/" target="_blank" rel="noopener noreferrer">
+  <nav class="l-header l-container u-d-n-tablet">
+    <a class="l-header__brand" href="https://www.linkedin.com/in/jeremy-james-sangutan-73b528249/" target="_blank" rel="noopener noreferrer">
       <img src="component-assets/images/JJS.png" alt="JJS">
     </a>
 
-    <ul class="core-header__links">
+    <ul class="l-header__links">
       <li>
         <a routerLink="/"> About me </a>
       </li>
@@ -15,8 +15,37 @@
         <a routerLink="/projects"> Projects </a>
       </li>
     </ul>
-    <a class="core-header__buttons" routerLink="/contact">
+    <a class="l-header__buttons" routerLink="/contact">
       Hire Me
     </a>
+  </nav>
+
+  <nav class="l-header l-header__mobile l-container">
+    <div class="l-header__mobile--navigation">
+      <a class="l-header__brand" href="https://www.linkedin.com/in/jeremy-james-sangutan-73b528249/" target="_blank" rel="noopener noreferrer">
+        <img src="component-assets/images/JJS.png" alt="JJS">
+      </a>
+      <span style="font-size:30px;cursor:pointer;color:white;" (click)="isShowHeaderOverlay = !isShowHeaderOverlay">&#9776;</span>
+    </div>
+    <div class="l-header__mobile--overlay" [class.overlay-height]="isShowHeaderOverlay">
+      <button class="overlay-close" (click)="isShowHeaderOverlay = !isShowHeaderOverlay">&times;</button>
+      <div class="overlay-content">
+        <ul class="">
+          <li>
+            <a routerLink="/" (click)="isShowHeaderOverlay = false"> About me </a>
+          </li>
+          <li>
+            <a routerLink="/contact" (click)="isShowHeaderOverlay = false"> Skills </a>
+          </li>
+          <li>
+            <a routerLink="/projects" (click)="isShowHeaderOverlay = false"> Projects </a>
+          </li>
+          <li>
+            <a routerLink="/contact" (click)="isShowHeaderOverlay = false"> Hire Me </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </nav>
 </header>

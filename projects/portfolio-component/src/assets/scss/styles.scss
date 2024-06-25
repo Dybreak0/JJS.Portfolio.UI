@@ -1,10 +1,89 @@
-/* settings less */
-@import './settings/colors';
-@import './settings/font';
-@import './settings/paths';
-@import './settings/root';
-@import './settings/sanitize';
-@import './settings/variables';
+@charset "UTF-8";
+/*
+  core
+    >reset
+      > normalize styles
+    >settings
+      > colors, font faces, variables, paths
+    >tools
+      > media query, funcions
 
-/* tools less */
-@import './tools/media';
+  forms
+    > form design templates
+
+  layout
+    > header/main/sidebar/footer
+    > basic layout styles
+    *note :
+      > container : width & height , padding , margin
+      > usage : header , main , sidebar(side nav) , footer
+
+  utility
+    > for minor changes
+
+    *note :
+      > width , animation, , margin , padding
+
+  style.scss
+    > compile all scss file
+*/
+
+// //core
+// @import "./core/tools/functions";
+// @import "./core/tools/media";
+
+// @import "./core/reset/root";
+// @import "./core/reset/sanitize";
+
+// @import "./core/settings/colors";
+// @import "./core/settings/font";
+// @import "./core/settings/paths";
+// @import "./core/settings/variables";
+
+
+
+// //forms
+
+// //layout
+// @import "./layout/container";
+// @import "./layout/content";
+// @import "./layout/footer";
+// @import "./layout/header";
+// @import "./layout/navigation";
+// @import "./layout/sidebar";
+
+// //utility
+// @import "./utility/animation";
+// @import "./utility/display";
+// @import "./utility/margin";
+// @import "./utility/padding";
+
+
+@import "../scss/core/tools/functions";
+@import "../scss/core/tools/media";
+
+@import "../scss/core/reset/root";
+@import "../scss/core/reset/sanitize";
+
+@import "../scss/core/settings/colors";
+@import "../scss/core/settings/font";
+@import "../scss/core/settings/paths";
+@import "../scss/core/settings/variables";
+
+
+
+//forms
+
+//layout
+@import "../scss/layout/container";
+@import "../scss/layout/content";
+@import "../scss/layout/footer";
+@import "../scss/layout/header";
+@import "../scss/layout/navigation";
+@import "../scss/layout/sidebar";
+
+//utility
+@import "../scss/utility/animation";
+@import "../scss/utility/display";
+@import "../scss/utility/margin";
+@import "../scss/utility/padding";

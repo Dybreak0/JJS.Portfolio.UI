@@ -1,0 +1,189 @@
+.u-shake {
+  animation: shake 1.5s infinite ease;
+
+  @keyframes shake {
+    0% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+
+    20% {
+      -webkit-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+      -webkit-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+    }
+
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+
+  &__torigin {
+    transform-origin: 130px 15px;
+  }
+}
+
+.u-walk {
+  animation: walk 10s both;
+
+  @keyframes walk {
+    0% {
+      transform: translateX(-300px);
+    }
+
+    100% {
+      transform: translateX(300px);
+    }
+  }
+}
+
+.u-slide {
+  animation: slide 20s both infinite linear;
+
+  &__reverse {
+    animation-duration: 10s;
+    animation-direction: reverse;
+  }
+
+  &__airplane {
+    animation: airplane 15s both infinite linear reverse;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+
+    50% {
+      transform: translateX(30%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes airplane {
+    from {
+      transform: translateX(-900px);
+    }
+
+    to {
+      transform: translateX(1500px);
+    }
+  }
+}
+
+.u-jump {
+  animation: jump 1s alternate infinite ease;
+
+  @keyframes jump {
+    from {
+      transform: translateY(10px);
+    }
+
+    to {
+      transform: translateY(100px);
+    }
+  }
+}
+
+
+.u-popup {
+  animation: popup 1s infinite ease;
+  transform-origin: 170px 100px;
+
+  @include is-tablet {
+    transform-origin: 200px 100px;
+  }
+
+  @keyframes popup {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+.u-swing {
+  animation: swing 3s infinite linear;
+
+  @keyframes swing {
+    0% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+
+    10% {
+      -webkit-transform: rotate(-6deg);
+      transform: rotate(-6deg);
+    }
+
+    45% {
+      -webkit-transform: rotate(6deg);
+      transform: rotate(6deg);
+    }
+
+    90% {
+      -webkit-transform: rotate(-6deg);
+      transform: rotate(-6deg);
+    }
+
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+}
+
+.u-raise {
+  animation: raise .5s infinite ease;
+
+  @keyframes raise {
+    from {
+      transform: translateY(3px);
+    }
+
+    to {
+      transform: translateY(0px);
+    }
+  }
+}
+
+.u-float {
+  @keyframes float {
+    0% {
+      margin-top: 0px;
+      transform: scale(0.95);
+    }
+
+    50% {
+      margin-top: -40px;
+      transform: scale(1);
+    }
+
+    100% {
+      margin-top: 0px;
+      transform: scale(0.95);
+    }
+  }
+
+}
